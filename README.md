@@ -17,7 +17,9 @@ src/
 │   │   └── Hole.java              //target hole
 │   │
 │   ├── obstacles/
-│   │   ├── Obstacle.java          //base obstacle interface
+│   │   ├── Obstacle.java          //base obstacle Abstract Class
+│   │   ├── Walls.java             //walls interface
+│   │   ├── EdgeWall.java          //map borders
 │   │   ├── StaticWall.java        //basic walls
 │   │   ├── SandTrap.java          //friction obstacles
 │   │   ├── WaterHazard.java       //reset obstacles

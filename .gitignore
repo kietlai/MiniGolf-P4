@@ -1,0 +1,31 @@
+# Compiled classes
+  /bin/
+  *.class
+
+  # Eclipse IDE files
+  .metadata/
+  .recommenders/
+  *.tmp
+  *.bak
+  *.swp
+  *~.nib
+
+  # IntelliJ IDEA files
+  .idea/
+  *.iml
+  *.iws
+
+  # VSCode files
+  .vscode/
+
+  # OS files
+  .DS_Store
+  Thumbs.db
+
+  # Build artifacts
+  *.jar
+  *.war
+  *.ear
+
+  # Logs
+  *.log

@@ -1,8 +1,8 @@
 package game;
 
 /*
-CLASS: YourGameNameoids
-DESCRIPTION: Extending Game, YourGameName is all in the paint method.
+CLASS: MiniGolf
+DESCRIPTION: Extending Game, MiniGolf is all in the paint method.
 NOTE: This class is the metaphorical "main method" of your program,
       it is your control center.
 

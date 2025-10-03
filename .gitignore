@@ -29,3 +29,7 @@
 
   # Logs
   *.log
+  
+  # Submit Server
+  .submit
+  .submitUser

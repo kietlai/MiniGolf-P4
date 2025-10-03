@@ -7,56 +7,84 @@ By: Sai and Kiet
 src/
 ├── game/
 │   ├── core/
-│   │   ├── Game.java              // Main game controller
-│   │   ├── GameState.java         // Game state management
-│   │   ├── Level.java             // Individual level representation
-│   │   └── MiniGolf.java          // Main entry point
+│   │   ├── Game.java              //main game controller
+│   │   ├── GameState.java         //game state management
+│   │   ├── Level.java             //individual level representation
+│   │   └── MiniGolf.java          //main entry point
 │   │
 │   ├── entities/
-│   │   ├── Ball.java              // Golf ball physics & state
-│   │   ├── Hole.java              // Target hole
-│   │   └── Tee.java               // Starting position
+│   │   ├── Ball.java              //golf ball physics & state
+│   │   └── Hole.java              //target hole
 │   │
 │   ├── obstacles/
-│   │   ├── Obstacle.java          // Base obstacle interface
-│   │   ├── StaticWall.java        // Basic walls
-│   │   ├── SandTrap.java          // Friction obstacles
-│   │   ├── WaterHazard.java       // Reset obstacles
-│   │   ├── Windmill.java          // Moving obstacles
-│   │   ├── Ramp.java              // Elevation changes
-│   │   └── Bumper.java            // Bouncy obstacles
+│   │   ├── Obstacle.java          //base obstacle interface
+│   │   ├── StaticWall.java        //basic walls
+│   │   ├── SandTrap.java          //friction obstacles
+│   │   ├── WaterHazard.java       //reset obstacles
+│   │   ├── Windmill.java          //moving obstacles
+│   │   ├── Ramp.java              //velocity modifier zones
+│   │   └── Bumper.java            //bouncy obstacles
 │   │
 │   ├── physics/
-│   │   ├── PhysicsEngine.java     // Main physics calculations
-│   │   ├── Collision.java         // Collision detection
-│   │   ├── Vector2D.java          // 2D vector math
-│   │   └── Friction.java          // Surface friction handling
+│   │   ├── PhysicsEngine.java     //main physics calculations
+│   │   ├── Collision.java         //collision detection
+│   │   ├── Vector2D.java          //2D vector math
+│   │   └── Friction.java          //surface friction handling
 │   │
 │   ├── input/
-│   │   ├── InputManager.java      // Centralized input handling
-│   │   ├── MouseHandler.java      // Mouse aiming logic
-│   │   └── KeyboardHandler.java   // Keyboard controls
+│   │   ├── InputManager.java      //centralized input handling
+│   │   ├── MouseHandler.java      //mouse aiming logic
+│   │   └── KeyboardHandler.java   //keyboard controls
 │   │
 │   ├── rendering/
-│   │   ├── Renderer.java          // Main rendering controller
-│   │   ├── Camera.java            // Viewport management
-│   │   ├── TerrainRenderer.java   // Elevation visualization
-│   │   └── UIRenderer.java        // HUD and menus
+│   │   ├── Renderer.java          //main rendering controller
+│   │   ├── Camera.java            //viewport management
+│   │   └── UIRenderer.java        //HUD and menus
 │   │
 │   ├── levels/
-│   │   ├── LevelGenerator.java    // Procedural level creation
-│   │   ├── LevelLoader.java       // Load predefined levels
-│   │   ├── TerrainMap.java        // Elevation data
-│   │   └── LevelValidator.java    // Ensure level completability
+│   │   ├── LevelGenerator.java    //procedural level creation
+│   │   ├── LevelLoader.java       //load predefined levels
+│   │   └── LevelValidator.java    //ensure level completability
 │   │
 │   ├── geometry/
-│   │   ├── Point.java             // 2D point (existing)
-│   │   ├── Polygon.java           // Polygon shapes (existing)
-│   │   ├── Circle.java            // Circular shapes
-│   │   └── Rectangle.java         // Rectangular bounds
+│   │   ├── Point.java             //2D point (existing)
+│   │   ├── Polygon.java           //polygon shapes (existing)
+│   │   ├── Circle.java            //circular shapes
+│   │   └── Rectangle.java         //rectangular bounds
 │   │
 │   └── utils/
-│       ├── MathUtils.java         // Mathematical utilities
-│       ├── FileUtils.java         // File I/O operations
-│       └── Constants.java         // Game constants
+│       ├── MathUtils.java         //mathematical utilities
+│       ├── FileUtils.java         //file I/O operations
+│       └── Constants.java         //game constants
 ```
+
+## Project 4 Requirements Mapping
+
+**3+ Different Elements (Classes):**
+- `Ball.java` - Golf ball entity
+- `Hole.java` - Target hole entity  
+- `StaticWall.java` - Wall obstacles
+- `SandTrap.java` - Friction obstacles
+- `WaterHazard.java` - Reset obstacles
+- `Windmill.java` - Moving obstacles
+- `Ramp.java` - Velocity modifier zones
+- `Bumper.java` - Bouncy obstacles
+
+**Interface:**
+- `Obstacle.java` - Interface implemented by all obstacle types
+
+**2 Inner Classes:**
+- `Level.ObstaclePlacer` - Handles obstacle placement within levels
+- `PhysicsEngine.CollisionResponse` - Processes collision responses
+
+**Anonymous Class:**
+- `InputManager.setupKeyListener()` - KeyListener for input handling
+
+**Lambda Expression:**
+- Will be used in level generation for obstacle filtering/processing
+
+**Additional Features:**
+- **Keyboard Input:** Spacebar for shooting, scroll wheel for power adjustment
+- **Collision Detection:** Ball vs obstacles, walls, and hole
+- **Element Rotation:** Windmill obstacles and ball aiming direction
+- **Movement:** Ball physics with velocity and friction

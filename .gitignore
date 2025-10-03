@@ -3,6 +3,7 @@
   *.class
 
   # Eclipse IDE files
+  .settings/
   .metadata/
   .recommenders/
   *.tmp

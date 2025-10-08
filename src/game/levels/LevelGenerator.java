@@ -7,5 +7,13 @@ DESCRIPTION: creates procedurally generated levels with varying difficulty
 */
 
 class LevelGenerator {
-
+	
+	public LevelGenerator(int seed) {
+		
+	}
+	
+	public Level generateRandom() {
+		return new Level(); //IMPLEMENT
+	}
+	
 }

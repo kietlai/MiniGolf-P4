@@ -9,10 +9,10 @@ DESCRIPTION: represents rectangular boundaries and collision boxes for
 public class Rect extends Polygon {
 	public Rect(Point p, int len, int height) {
 		super(new Point[] {
-			new Point(p.getX(), p.getY()),
-			new Point(len, p.getY()),
+			new Point(0, 0),
+			new Point(len, 0),
 			new Point(len, height),
-			new Point(p.getX(), height)
+			new Point(0, height)
 		}, p, 0);
 	}
 	

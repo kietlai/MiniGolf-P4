@@ -12,7 +12,7 @@ import game.geometry.Point;
 import java.awt.*;
 import java.awt.event.*;
 
-class MiniGolf extends Game {
+public class MiniGolf extends Game {
 	private Rect testRect;
 	static int counter = 0;
 
@@ -21,7 +21,7 @@ class MiniGolf extends Game {
     this.setFocusable(true);
 	this.requestFocus();
 	
-	testRect = new Rect(new Point(100, 100), 200, 500);
+	testRect = new Rect(new Point(0, 0), 500, 20);
   }
   
 	public void paint(Graphics brush) {
